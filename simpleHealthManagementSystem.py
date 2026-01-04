@@ -49,3 +49,5 @@ def main():
         operation[choice]()
     else:
         print("Invalid Input")
+
+main()
