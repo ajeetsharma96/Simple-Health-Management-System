@@ -1,3 +1,8 @@
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+
 def retr_data():
     import os
     print(f"{"-"*10}Profiles{"-"*10}")

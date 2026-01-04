@@ -1,6 +1,3 @@
-def getdate():
-    import datetime
-    return datetime.datetime.now()
 
 files={
     "Ajeet":{1:"ajeet_food.txt",2:"ajeet_exercise.txt"},
