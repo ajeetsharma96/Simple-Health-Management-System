@@ -33,6 +33,29 @@ def retr_data():
     else:
         print("Profile not found! Please Enter an existing Profile Name")
 
+def store_data():
+    print(f"{"-"*10}Profiles{"-"*10}")
+    print("1.Ajeet\n2.Rahul\n3.Akash\n4.Rudra\n5.Rakesh")
+    user=input("Enter the Profile: ")
+    if user in files:
+        print(f"{"-"*10}categories{"-"*10}")
+        print("1.Food\n2.Exercise")
+        category=int(input("Enter the categories: "))
+        
+        if category==1:
+            data=input("Good! What did you eat ? ")
+        else:
+            data=input("Great! Which exercise did you do ? ")
+        time=getdate()
+
+        with open(files[user][category],"a") as s:
+            s.write(f"[{time}] {data} \n" )
+
+        print("Data stored into your Profile successfully! ")
+    else:
+        print("Profile not found! Please Enter an existing Profile Name")
+
+
 
 def main():
     print(f"{"-"*20}HEALTH MANAGEMENT SYSTEM{"-"*20}")
